@@ -18,7 +18,7 @@ namespace FlutterWave.Core.Infrastructure.Build
 
             var githubPipeline = new GithubPipeline
             {
-                Name = "FlutterWave.Core Build",
+                Name = "FlutterWave.Core.Infrastructure Build",
 
 
                 OnEvents = new Events
