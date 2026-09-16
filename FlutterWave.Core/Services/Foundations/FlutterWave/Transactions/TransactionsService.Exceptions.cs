@@ -21,6 +21,8 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
 
         private delegate ValueTask<RefundDetails> ReturningRefundDetailsFunction();
 
+        private delegate ValueTask<ResendTransactionWebhook> ReturningResendTransactionWebhookFunction();
+
 
         private async ValueTask<MultipleRefundTransaction> TryCatch(
                 ReturningMultipleRefundTransactionsFunction returningMultipleRefundTransactionsFunction)
@@ -460,6 +462,79 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
             try
             {
                 return await returningMultipleTransactionsFunction();
+            }
+            catch (NullTransactionsException nullTransactionsException)
+            {
+                throw new TransactionsValidationException(nullTransactionsException);
+            }
+            catch (InvalidTransactionsException invalidTransactionsException)
+            {
+                throw new TransactionsValidationException(invalidTransactionsException);
+            }
+            catch (HttpResponseUrlNotFoundException httpResponseUrlNotFoundException)
+            {
+                var invalidConfigurationTransactionsException =
+                    new InvalidConfigurationTransactionsException(httpResponseUrlNotFoundException);
+
+                throw new TransactionsDependencyException(invalidConfigurationTransactionsException);
+            }
+            catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
+            {
+                var unauthorizedTransactionsException =
+                    new UnauthorizedTransactionsException(httpResponseUnauthorizedException);
+
+                throw new TransactionsDependencyException(unauthorizedTransactionsException);
+            }
+            catch (HttpResponseForbiddenException httpResponseForbiddenException)
+            {
+                var unauthorizedTransactionsException =
+                    new UnauthorizedTransactionsException(httpResponseForbiddenException);
+
+                throw new TransactionsDependencyException(unauthorizedTransactionsException);
+            }
+            catch (HttpResponseNotFoundException httpResponseNotFoundException)
+            {
+                var notFoundTransactionsException =
+                    new NotFoundTransactionsException(httpResponseNotFoundException);
+
+                throw new TransactionsDependencyValidationException(notFoundTransactionsException);
+            }
+            catch (HttpResponseBadRequestException httpResponseBadRequestException)
+            {
+                var invalidTransactionsException =
+                    new InvalidTransactionsException(httpResponseBadRequestException);
+
+                throw new TransactionsDependencyValidationException(invalidTransactionsException);
+            }
+            catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
+            {
+                var excessiveCallTransactionsException =
+                    new ExcessiveCallTransactionsException(httpResponseTooManyRequestsException);
+
+                throw new TransactionsDependencyValidationException(excessiveCallTransactionsException);
+            }
+            catch (HttpResponseException httpResponseException)
+            {
+                var failedServerTransactionsException =
+                    new FailedServerTransactionsException(httpResponseException);
+
+                throw new TransactionsDependencyException(failedServerTransactionsException);
+            }
+            catch (Exception exception)
+            {
+                var failedTransactionsServiceException =
+                    new FailedTransactionsServiceException(exception);
+
+                throw new TransactionsServiceException(failedTransactionsServiceException);
+            }
+        }
+
+        private async ValueTask<ResendTransactionWebhook> TryCatch(
+            ReturningResendTransactionWebhookFunction returningResendTransactionWebhookFunction)
+        {
+            try
+            {
+                return await returningResendTransactionWebhookFunction();
             }
             catch (NullTransactionsException nullTransactionsException)
             {

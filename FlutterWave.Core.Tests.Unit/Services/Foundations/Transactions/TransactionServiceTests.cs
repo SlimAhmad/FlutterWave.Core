@@ -400,6 +400,20 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.Transactions
 
         #endregion
 
+        #region ResendTransactionWebhookProperties
+
+        private static dynamic CreateRandomResendTransactionWebhookProperties()
+        {
+            return new
+            {
+                Status = GetRandomString(),
+                Message = GetRandomString(),
+                Data = new object(),
+            };
+        }
+
+        #endregion
+
         private static Filler<MultipleTransaction> CreateMultipleTransactionFiller()
         {
             var filler = new Filler<MultipleTransaction>();

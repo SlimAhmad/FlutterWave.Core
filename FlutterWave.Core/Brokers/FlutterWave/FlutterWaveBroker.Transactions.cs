@@ -58,5 +58,12 @@ namespace FlutterWave.Core
             return await GetAsync<ExternalVerifyTransactionResponse>(
             relativeUrl: $"v3/transactions/{transactionReference}/verify");
         }
+
+        public async ValueTask<ExternalResendTransactionWebhookResponse> PostResendTransactionWebhookAsync(
+            int transactionId, int wait)
+        {
+            return await PostAsync<ExternalResendTransactionWebhookResponse>(
+           relativeUrl: $"v3/transactions/{transactionId}/resend-hook?wait={wait}", content: null);
+        }
     }
 }

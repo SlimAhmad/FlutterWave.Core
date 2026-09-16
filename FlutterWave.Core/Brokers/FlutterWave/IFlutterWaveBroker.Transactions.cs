@@ -26,6 +26,9 @@ namespace FlutterWave.Core
 
         ValueTask<ExternalVerifyTransactionResponse> PostVerifyTransactionAsync(
             string transactionReference);
+
+        ValueTask<ExternalResendTransactionWebhookResponse> PostResendTransactionWebhookAsync(
+            int transactionId, int wait);
     }
 
 
