@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.BillPayment
 {
     public interface IBillPaymentsClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="BillPaymentsClientValidationException" />
+        /// <exception cref="BillPaymentsClientDependencyException" />
+        /// <exception cref="BillPaymentsClientServiceException" />
         ValueTask<BillCategories> FetchBillCategoriesAsync();
 
         ValueTask<ValidateBillService> FetchValidateBillServiceAsync(

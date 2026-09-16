@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.Transaction
 {
     public interface ITransactionsClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="TransactionsClientValidationException" />
+        /// <exception cref="TransactionsClientDependencyException" />
+        /// <exception cref="TransactionsClientServiceException" />
         ValueTask<CreateRefund> CreateRefundRequestAsync(
         int transactionId);
 

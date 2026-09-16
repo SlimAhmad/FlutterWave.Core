@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.Transfer
 {
     public interface ITransfersClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="TransfersClientValidationException" />
+        /// <exception cref="TransfersClientDependencyException" />
+        /// <exception cref="TransfersClientServiceException" />
         ValueTask<AllTransfers> RetrieveAllTransfersAsync();
 
         ValueTask<TransferRates> RetrieveTransferRatesAsync(

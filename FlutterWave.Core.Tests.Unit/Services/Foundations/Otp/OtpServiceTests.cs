@@ -129,7 +129,7 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.Otp
 
 
 
-        public static TheoryData UnauthorizedExceptions()
+        public static TheoryData<HttpResponseException> UnauthorizedExceptions()
         {
             return new TheoryData<HttpResponseException>
             {

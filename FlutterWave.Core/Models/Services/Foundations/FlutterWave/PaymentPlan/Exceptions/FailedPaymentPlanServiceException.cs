@@ -6,7 +6,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.PaymentPlan
     public class FailedPaymentPlanServiceException : Xeption
     {
         public FailedPaymentPlanServiceException(Exception innerException)
-            : base(message: "Failed Settlement service error occurred, contact support.",
+            : base(message: "Failed PaymentPlan service error occurred, contact support.",
                   innerException)
         { }
 

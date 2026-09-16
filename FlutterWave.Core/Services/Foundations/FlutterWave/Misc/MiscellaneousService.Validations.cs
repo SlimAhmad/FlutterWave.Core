@@ -87,7 +87,7 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
 
         private static dynamic IsInvalid(double number) => new
         {
-            Condition = number >= 0,
+            Condition = number <= 0,
             Message = "Value is required"
         };
 

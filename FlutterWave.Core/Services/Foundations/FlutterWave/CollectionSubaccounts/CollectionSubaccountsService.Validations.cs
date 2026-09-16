@@ -19,7 +19,13 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.CollectionSubaccount
                 (Rule: IsInvalid(createCollectionSubaccount.Request.SplitValue), Parameter: nameof(CreateCollectionSubaccountRequest.SplitValue)),
                 (Rule: IsInvalid(createCollectionSubaccount.Request.BusinessName), Parameter: nameof(CreateCollectionSubaccountRequest.BusinessName)),
                 (Rule: IsInvalid(createCollectionSubaccount.Request.AccountNumber), Parameter: nameof(CreateCollectionSubaccountRequest.AccountNumber)),
-                (Rule: IsInvalid(createCollectionSubaccount.Request.AccountBank), Parameter: nameof(CreateCollectionSubaccountRequest.AccountBank))
+                (Rule: IsInvalid(createCollectionSubaccount.Request.AccountBank), Parameter: nameof(CreateCollectionSubaccountRequest.AccountBank)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.BusinessContact), Parameter: nameof(CreateCollectionSubaccountRequest.BusinessContact)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.BusinessContactMobile), Parameter: nameof(CreateCollectionSubaccountRequest.BusinessContactMobile)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.BusinessEmail), Parameter: nameof(CreateCollectionSubaccountRequest.BusinessEmail)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.Country), Parameter: nameof(CreateCollectionSubaccountRequest.Country)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.Meta), Parameter: nameof(CreateCollectionSubaccountRequest.Meta)),
+                (Rule: IsInvalid(createCollectionSubaccount.Request.SplitType), Parameter: nameof(CreateCollectionSubaccountRequest.SplitType))
 
                 );
 
@@ -41,20 +47,20 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.CollectionSubaccount
 
 
 
-        private static void ValidateUpdateSubaccountRequestNotNull(UpdateSubaccountRequest virtualCards)
+        private static void ValidateUpdateSubaccountRequestNotNull(UpdateSubaccountRequest updateSubaccountRequest)
         {
-            Validate((Rule: IsInvalid(virtualCards), Parameter: nameof(UpdateSubaccountRequest)));
+            Validate((Rule: IsInvalid(updateSubaccountRequest), Parameter: nameof(UpdateSubaccountRequest)));
         }
-        private static void ValidateCreateCollectionSubaccountRequestNotNull(CreateCollectionSubaccountRequest virtualCards)
+        private static void ValidateCreateCollectionSubaccountRequestNotNull(CreateCollectionSubaccountRequest createCollectionSubaccountRequest)
         {
-            Validate((Rule: IsInvalid(virtualCards), Parameter: nameof(CreateCollectionSubaccountRequest)));
+            Validate((Rule: IsInvalid(createCollectionSubaccountRequest), Parameter: nameof(CreateCollectionSubaccountRequest)));
         }
 
 
 
-        private static void ValidateCreateCollectionSubaccountNotNull(CreateCollectionSubaccount virtualCards)
+        private static void ValidateCreateCollectionSubaccountNotNull(CreateCollectionSubaccount createCollectionSubaccount)
         {
-            if (virtualCards is null)
+            if (createCollectionSubaccount is null)
             {
                 throw new NullCollectionSubaccountsException();
             }
@@ -64,9 +70,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.CollectionSubaccount
 
 
 
-        private static void ValidateUpdateSubaccountNotNull(UpdateSubaccount virtualCards)
+        private static void ValidateUpdateSubaccountNotNull(UpdateSubaccount updateSubaccount)
         {
-            if (virtualCards is null)
+            if (updateSubaccount is null)
             {
                 throw new NullCollectionSubaccountsException();
             }
@@ -80,9 +86,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.CollectionSubaccount
 
         private static void ValidateDeleteSubaccountId(int id) =>
             Validate((Rule: IsInvalid(id), Parameter: nameof(DeleteSubaccount)));
-
-        private static void ValidateUpdateSubaccountId(int id) =>
-            Validate((Rule: IsInvalid(id), Parameter: nameof(UpdateSubaccountRequest)));
 
         private static void ValidateFetchSubaccountId(int id) =>
            Validate((Rule: IsInvalid(id), Parameter: nameof(FetchSubaccount)));
@@ -101,19 +104,19 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.CollectionSubaccount
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
-            var invalidVirtualCardException = new InvalidCollectionSubaccountsException();
+            var invalidCollectionSubaccountsException = new InvalidCollectionSubaccountsException();
 
             foreach ((dynamic rule, string parameter) in validations)
             {
                 if (rule.Condition)
                 {
-                    invalidVirtualCardException.UpsertDataList(
+                    invalidCollectionSubaccountsException.UpsertDataList(
                         key: parameter,
                         value: rule.Message);
                 }
             }
 
-            invalidVirtualCardException.ThrowIfContainsErrors();
+            invalidCollectionSubaccountsException.ThrowIfContainsErrors();
         }
     }
 }

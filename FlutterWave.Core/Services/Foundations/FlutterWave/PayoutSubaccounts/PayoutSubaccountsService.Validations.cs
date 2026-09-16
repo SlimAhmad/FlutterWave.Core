@@ -45,27 +45,27 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PayoutSubaccountsSer
 
 
 
-        private static void ValidateUpdatePayoutSubaccountRequestNotNull(UpdatePayoutSubaccountRequest virtualCards)
+        private static void ValidateUpdatePayoutSubaccountRequestNotNull(UpdatePayoutSubaccountRequest updatePayoutSubaccountRequest)
         {
-            Validate((Rule: IsInvalid(virtualCards), Parameter: nameof(UpdatePayoutSubaccountRequest)));
+            Validate((Rule: IsInvalid(updatePayoutSubaccountRequest), Parameter: nameof(UpdatePayoutSubaccountRequest)));
         }
-        private static void ValidateCreatePayoutSubaccountRequestNotNull(CreatePayoutSubaccountRequest virtualCards)
+        private static void ValidateCreatePayoutSubaccountRequestNotNull(CreatePayoutSubaccountRequest createPayoutSubaccountRequest)
         {
-            Validate((Rule: IsInvalid(virtualCards), Parameter: nameof(CreatePayoutSubaccountRequest)));
+            Validate((Rule: IsInvalid(createPayoutSubaccountRequest), Parameter: nameof(CreatePayoutSubaccountRequest)));
         }
 
 
 
-        private static void ValidateCreatePayoutSubaccountNotNull(CreatePayoutSubaccount virtualCards)
+        private static void ValidateCreatePayoutSubaccountNotNull(CreatePayoutSubaccount createPayoutSubaccount)
         {
-            if (virtualCards is null)
+            if (createPayoutSubaccount is null)
             {
                 throw new NullPayoutSubaccountsException();
             }
         }
-        private static void ValidateUpdatePayoutSubaccountNotNull(UpdatePayoutSubaccount virtualCards)
+        private static void ValidateUpdatePayoutSubaccountNotNull(UpdatePayoutSubaccount updatePayoutSubaccount)
         {
-            if (virtualCards is null)
+            if (updatePayoutSubaccount is null)
             {
                 throw new NullPayoutSubaccountsException();
             }
@@ -80,8 +80,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PayoutSubaccountsSer
         private static void ValidateFetchPayoutSubaccountString(string text) =>
             Validate((Rule: IsInvalid(text), Parameter: nameof(FetchPayoutSubaccount)));
 
-        private static void ValidateUpdatePayoutSubaccountString(string text) =>
-            Validate((Rule: IsInvalid(text), Parameter: nameof(UpdatePayoutSubaccount)));
         private static void ValidatePayoutSubaccountTransactionsString(string text) =>
         Validate((Rule: IsInvalid(text), Parameter: nameof(FetchPayoutSubaccountTransactions)));
 
@@ -108,19 +106,19 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PayoutSubaccountsSer
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
-            var invalidVirtualCardException = new InvalidPayoutSubaccountsException();
+            var invalidPayoutSubaccountsException = new InvalidPayoutSubaccountsException();
 
             foreach ((dynamic rule, string parameter) in validations)
             {
                 if (rule.Condition)
                 {
-                    invalidVirtualCardException.UpsertDataList(
+                    invalidPayoutSubaccountsException.UpsertDataList(
                         key: parameter,
                         value: rule.Message);
                 }
             }
 
-            invalidVirtualCardException.ThrowIfContainsErrors();
+            invalidPayoutSubaccountsException.ThrowIfContainsErrors();
         }
     }
 }

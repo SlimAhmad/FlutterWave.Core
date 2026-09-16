@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.OTP
 {
     public interface IOtpClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="OtpClientValidationException" />
+        /// <exception cref="OtpClientDependencyException" />
+        /// <exception cref="OtpClientServiceException" />
         ValueTask<CreateOtp> CreateOtpAsync(
         CreateOtp otp);
 

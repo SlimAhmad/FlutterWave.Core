@@ -3,7 +3,7 @@
 namespace FlutterWave.Core.Models.Clients.Remita.Exceptions
 {
     /// <summary>
-    /// This exception is thrown when a dependency error occurs while using the completion client. 
+    /// This exception is thrown when a dependency error occurs while using the Remita client.
     /// For example, if a required dependency is unavailable or incompatible.
     /// </summary>
     public class RemitaClientDependencyException : Xeption

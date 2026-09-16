@@ -38,9 +38,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.ChargeBackService
         private static void ValidateChargeBackId(string chargeBackId) =>
              Validate((Rule: IsInvalid(chargeBackId), Parameter: nameof(ChargeBack)));
 
-        private static void ValidateAcceptDeclineChargeBackId(string chargeBackId) =>
-             Validate((Rule: IsInvalid(chargeBackId), Parameter: nameof(AcceptDeclineChargeBack)));
-
         private static void ValidateChargeBackInt(double chargeBackInt) =>
            Validate(
                (Rule: IsInvalid(chargeBackInt), Parameter: nameof(ChargeBack))
@@ -61,7 +58,7 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.ChargeBackService
 
         private static dynamic IsInvalid(double number) => new
         {
-            Condition = number >= 0,
+            Condition = number <= 0,
             Message = "Value is required"
         };
 

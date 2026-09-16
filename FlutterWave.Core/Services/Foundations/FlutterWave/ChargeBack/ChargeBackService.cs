@@ -31,7 +31,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.ChargeBackService
             string chargeBackId, AcceptDeclineChargeBack chargeBack) =>
         TryCatch(async () =>
         {
-            //ValidateAcceptDeclineChargeBackId(chargeBackId);
             ValidateChargeBack(chargeBackId, chargeBack);
             ExternalAcceptDeclineChargeBackRequest externalAcceptDeclineChargeBackRequest =
             ConvertToAcceptDeclineRequest(chargeBack);

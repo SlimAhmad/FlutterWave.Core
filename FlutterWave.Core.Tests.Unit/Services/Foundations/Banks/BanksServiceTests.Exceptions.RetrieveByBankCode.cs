@@ -232,7 +232,7 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.Banks
 
             var failedServerBanksException =
                 new FailedServerBanksException(
-                    message: "Failed Bank server error occurred, contact support.",
+                    message: "Failed Banks server error occurred, contact support.",
                     httpResponseException);
 
             var expectedBanksDependencyException =

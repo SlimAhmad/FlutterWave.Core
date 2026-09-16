@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.VirtualAccount
 {
     public interface IVirtualAccountsClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="VirtualAccountsClientValidationException" />
+        /// <exception cref="VirtualAccountsClientDependencyException" />
+        /// <exception cref="VirtualAccountsClientServiceException" />
         ValueTask<CreateVirtualAccounts> CreateVirtualAccountAsync(
      CreateVirtualAccounts virtualAccounts);
 

@@ -162,7 +162,7 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.ChargeBacks
         #endregion
 
 
-        public static TheoryData UnauthorizedExceptions()
+        public static TheoryData<HttpResponseException> UnauthorizedExceptions()
         {
             return new TheoryData<HttpResponseException>
             {

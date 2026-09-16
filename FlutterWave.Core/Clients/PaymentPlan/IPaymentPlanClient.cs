@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.PaymentPlans
 {
     public interface IPaymentPlanClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="PaymentPlanClientValidationException" />
+        /// <exception cref="PaymentPlanClientDependencyException" />
+        /// <exception cref="PaymentPlanClientServiceException" />
         ValueTask<CreatePaymentPlan> CreatePaymentPlanAsync(
                   CreatePaymentPlan paymentPlan);
         ValueTask<AllPaymentPlans> FetchPaymentPlansAsync();

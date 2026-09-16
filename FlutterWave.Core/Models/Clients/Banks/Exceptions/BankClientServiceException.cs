@@ -9,7 +9,7 @@ namespace FlutterWave.Core.Models.Clients.Banks.Exceptions
     public class BankClientServiceException : Xeption
     {
         public BankClientServiceException(Xeption innerException)
-            : base(message: "Bank client service error occurred, contact support.",
+            : base(message: "Banks client service error occurred, contact support.",
                   innerException)
         { }
     }

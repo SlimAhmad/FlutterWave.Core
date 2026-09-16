@@ -6,7 +6,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
     public class FailedServerSettlementsException : Xeption
     {
         public FailedServerSettlementsException(Exception innerException)
-            : base(message: "Failed Settlement server error occurred, contact support.",
+            : base(message: "Failed Settlements server error occurred, contact support.",
                   innerException)
         { }
 

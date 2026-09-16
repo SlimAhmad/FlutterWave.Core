@@ -3,7 +3,7 @@
 namespace FlutterWave.Core.Models.Clients.Banks.Exceptions
 {
     /// <summary>
-    /// This exception is thrown when a validation error occurs while using the completion client.
+    /// This exception is thrown when a validation error occurs while using the Bank client.
     /// For example, if required data is missing or invalid.
     /// </summary>
     public class BankClientValidationException : Xeption

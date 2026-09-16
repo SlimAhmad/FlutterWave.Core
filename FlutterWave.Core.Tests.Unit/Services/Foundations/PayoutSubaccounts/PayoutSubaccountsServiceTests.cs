@@ -380,7 +380,7 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.PayoutSubaccount
         #endregion
 
 
-        public static TheoryData UnauthorizedExceptions()
+        public static TheoryData<HttpResponseException> UnauthorizedExceptions()
         {
             return new TheoryData<HttpResponseException>
             {

@@ -25,9 +25,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningBvnConsentFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -42,52 +42,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 
@@ -97,9 +97,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningBinVerificationFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -114,52 +114,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 
@@ -169,9 +169,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningBalanceByCurrenciesFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -186,52 +186,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 
@@ -241,9 +241,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningBalanceByCurrencyFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -258,52 +258,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 
@@ -313,9 +313,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningBankAccountVerificationFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -330,52 +330,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 
@@ -385,9 +385,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             {
                 return await returningStatementFunction();
             }
-            catch (NullMiscellaneousException nullMIscellaneousException)
+            catch (NullMiscellaneousException nullMiscellaneousException)
             {
-                throw new MiscellaneousValidationException(nullMIscellaneousException);
+                throw new MiscellaneousValidationException(nullMiscellaneousException);
             }
             catch (InvalidMiscellaneousException invalidMiscellaneousException)
             {
@@ -402,52 +402,52 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.MiscService
             }
             catch (HttpResponseUnauthorizedException httpResponseUnauthorizedException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseUnauthorizedException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseForbiddenException httpResponseForbiddenException)
             {
-                var unauthorizedMIscellaneousException =
+                var unauthorizedMiscellaneousException =
                     new UnauthorizedMiscException(httpResponseForbiddenException);
 
-                throw new MiscellaneousDependencyException(unauthorizedMIscellaneousException);
+                throw new MiscellaneousDependencyException(unauthorizedMiscellaneousException);
             }
             catch (HttpResponseNotFoundException httpResponseNotFoundException)
             {
-                var notFoundMIscellaneousException =
+                var notFoundMiscellaneousException =
                     new NotFoundMiscException(httpResponseNotFoundException);
 
-                throw new MiscellaneousDependencyValidationException(notFoundMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(notFoundMiscellaneousException);
             }
             catch (HttpResponseBadRequestException httpResponseBadRequestException)
             {
-                var invalidMIscellaneousException =
+                var invalidMiscellaneousException =
                     new InvalidMiscellaneousException(httpResponseBadRequestException);
 
-                throw new MiscellaneousDependencyValidationException(invalidMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(invalidMiscellaneousException);
             }
             catch (HttpResponseTooManyRequestsException httpResponseTooManyRequestsException)
             {
-                var excessiveCallMIscellaneousException =
+                var excessiveCallMiscellaneousException =
                     new ExcessiveCallMiscException(httpResponseTooManyRequestsException);
 
-                throw new MiscellaneousDependencyValidationException(excessiveCallMIscellaneousException);
+                throw new MiscellaneousDependencyValidationException(excessiveCallMiscellaneousException);
             }
             catch (HttpResponseException httpResponseException)
             {
-                var failedServerMIscellaneousException =
+                var failedServerMiscellaneousException =
                     new FailedServerMiscException(httpResponseException);
 
-                throw new MiscellaneousDependencyException(failedServerMIscellaneousException);
+                throw new MiscellaneousDependencyException(failedServerMiscellaneousException);
             }
             catch (Exception exception)
             {
-                var failedMIscellaneousServiceException =
+                var failedMiscellaneousServiceException =
                     new FailedMiscServiceException(exception);
 
-                throw new MiscellaneousServiceException(failedMIscellaneousServiceException);
+                throw new MiscellaneousServiceException(failedMiscellaneousServiceException);
             }
         }
 

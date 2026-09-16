@@ -3,7 +3,7 @@
 namespace FlutterWave.Core.Models.Clients.Remita.Exceptions
 {
     /// <summary>
-    /// This exception is thrown when a service error occurs while using the completion client. 
+    /// This exception is thrown when a service error occurs while using the Remita client.
     /// For example, if there is a problem with the server or any other service failure.
     /// </summary>
     public class RemitaClientServiceException : Xeption

@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.OTP
 {
     public interface ISubscriptionsClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="SubscriptionClientValidationException" />
+        /// <exception cref="SubscriptionClientDependencyException" />
+        /// <exception cref="SubscriptionClientServiceException" />
         ValueTask<AllSubscription> FetchAllSubscriptionsAsync();
 
         ValueTask<Subscription> ActivateSubscriptionAsync(string subscriptionId);

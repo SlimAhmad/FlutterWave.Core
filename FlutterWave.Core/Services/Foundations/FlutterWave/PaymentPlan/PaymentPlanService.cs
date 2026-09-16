@@ -57,6 +57,7 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PaymentPlanService
         public ValueTask<UpdatePaymentPlan> UpdatePaymentPlanAsync(string paymentPlanId, UpdatePaymentPlan paymentPlan) =>
         TryCatch(async () =>
         {
+            ValidatePaymentPlanId(paymentPlanId);
             ValidateUpdatePaymentPlan(paymentPlan);
             ExternalUpdatePaymentPlanRequest externalUpdatePaymentPlanRequest = ConvertToPaymentPlanRequest(paymentPlan);
             ExternalPaymentPlanResponse externalUpdatePaymentPlanResponse = await flutterWaveBroker.UpdatePaymentPlanAsync(

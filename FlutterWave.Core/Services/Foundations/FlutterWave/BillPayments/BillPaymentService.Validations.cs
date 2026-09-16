@@ -1,8 +1,4 @@
-﻿
-
-
-
-using FlutterWave.Core.Models.Services.Foundations.FlutterWave.BillPayment;
+﻿using FlutterWave.Core.Models.Services.Foundations.FlutterWave.BillPayment;
 using FlutterWave.Core.Models.Services.Foundations.FlutterWave.BillPayments;
 using System;
 
@@ -26,21 +22,21 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.BillPaymentService
         }
 
 
-        private static void ValidateCreateBillPayment(PostBillPayments BillPayments)
+        private static void ValidateCreateBillPayment(PostBillPayments billPayments)
         {
-            ValidateCreateBillPaymentNotNull(BillPayments);
-            ValidateCreateBillPaymentRequest(BillPayments.Request);
+            ValidateCreateBillPaymentNotNull(billPayments);
+            ValidateCreateBillPaymentRequest(billPayments.Request);
             Validate(
-                (Rule: IsInvalid(BillPayments.Request), Parameter: nameof(BillPayments.Request)));
+                (Rule: IsInvalid(billPayments.Request), Parameter: nameof(billPayments.Request)));
 
             Validate(
-                (Rule: IsInvalid(BillPayments.Request.Country), Parameter: nameof(CreateBillPaymentRequest.Country)),
-                (Rule: IsInvalid(BillPayments.Request.Type), Parameter: nameof(CreateBillPaymentRequest.Type)),
-                (Rule: IsInvalid(BillPayments.Request.Recurrence), Parameter: nameof(CreateBillPaymentRequest.Recurrence)),
-                (Rule: IsInvalid(BillPayments.Request.Reference), Parameter: nameof(CreateBillPaymentRequest.Reference)),
-                (Rule: IsInvalid(BillPayments.Request.BillerName), Parameter: nameof(CreateBillPaymentRequest.BillerName)),
-                (Rule: IsInvalid(BillPayments.Request.Amount), Parameter: nameof(CreateBillPaymentRequest.Amount)),
-                (Rule: IsInvalid(BillPayments.Request.Customer), Parameter: nameof(CreateBillPaymentRequest.Customer))
+                (Rule: IsInvalid(billPayments.Request.Country), Parameter: nameof(CreateBillPaymentRequest.Country)),
+                (Rule: IsInvalid(billPayments.Request.Type), Parameter: nameof(CreateBillPaymentRequest.Type)),
+                (Rule: IsInvalid(billPayments.Request.Recurrence), Parameter: nameof(CreateBillPaymentRequest.Recurrence)),
+                (Rule: IsInvalid(billPayments.Request.Reference), Parameter: nameof(CreateBillPaymentRequest.Reference)),
+                (Rule: IsInvalid(billPayments.Request.BillerName), Parameter: nameof(CreateBillPaymentRequest.BillerName)),
+                (Rule: IsInvalid(billPayments.Request.Amount), Parameter: nameof(CreateBillPaymentRequest.Amount)),
+                (Rule: IsInvalid(billPayments.Request.Customer), Parameter: nameof(CreateBillPaymentRequest.Customer))
 
                 );
 
@@ -97,7 +93,7 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.BillPaymentService
 
         private static dynamic IsInvalid(double number) => new
         {
-            Condition = number >= 0,
+            Condition = number <= 0,
             Message = "Value is required"
         };
 

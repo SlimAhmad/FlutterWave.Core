@@ -124,6 +124,30 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.CollectionSubaccount
               key: nameof(CreateCollectionSubaccountRequest.AccountBank),
               values: "Value is required");
 
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessContact),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessContactMobile),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessEmail),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.Country),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.Meta),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.SplitType),
+              values: "Value is required");
+
 
 
             var expectedCollectionSubaccountsValidationException =
@@ -182,6 +206,30 @@ namespace FlutterWave.Core.Tests.Unit.Services.Foundations.CollectionSubaccount
 
             invalidPaymentsException.AddData(
               key: nameof(CreateCollectionSubaccountRequest.AccountBank),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessContact),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessContactMobile),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.BusinessEmail),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.Country),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.Meta),
+              values: "Value is required");
+
+            invalidPaymentsException.AddData(
+              key: nameof(CreateCollectionSubaccountRequest.SplitType),
               values: "Value is required");
 
             var expectedCollectionSubaccountsValidationException =

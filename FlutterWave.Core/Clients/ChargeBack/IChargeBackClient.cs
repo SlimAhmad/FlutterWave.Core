@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.ChargeBacks
 {
     public interface IChargeBackClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="ChargeBacksClientValidationException" />
+        /// <exception cref="ChargeBacksClientDependencyException" />
+        /// <exception cref="ChargeBacksClientServiceException" />
         ValueTask<AllChargeBacks> RetrieveAllChargeBacksAsync();
         ValueTask<AcceptDeclineChargeBack> AcceptDeclineChargeBacksAsync(
           string chargeBackId, AcceptDeclineChargeBack chargeBack);

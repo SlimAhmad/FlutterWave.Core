@@ -74,27 +74,27 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PreauthorizationServ
 
 
 
-        private static void ValidateCaptureChargeRequestNotNull(CaptureChargeRequest createPreauthorizationRefund)
+        private static void ValidateCaptureChargeRequestNotNull(CaptureChargeRequest captureChargeRequest)
         {
-            Validate((Rule: IsInvalid(createPreauthorizationRefund), Parameter: nameof(CaptureChargeRequest)));
+            Validate((Rule: IsInvalid(captureChargeRequest), Parameter: nameof(CaptureChargeRequest)));
         }
         private static void ValidateCapturePayPalChargeRequestNotNull(CapturePayPalChargeRequest capturePaypalChargeRequest)
         {
             Validate((Rule: IsInvalid(capturePaypalChargeRequest), Parameter: nameof(CapturePayPalChargeRequest)));
         }
-        private static void ValidateCreateChargeRequestNotNull(CreateChargeRequest createPreauthorizationRefund)
+        private static void ValidateCreateChargeRequestNotNull(CreateChargeRequest createChargeRequest)
         {
-            Validate((Rule: IsInvalid(createPreauthorizationRefund), Parameter: nameof(CreateChargeRequest)));
+            Validate((Rule: IsInvalid(createChargeRequest), Parameter: nameof(CreateChargeRequest)));
         }
 
-        private static void ValidateCreatePreauthorizationRefundRequestNotNull(CreatePreauthorizationRefundRequest createPreauthorizationRefund)
+        private static void ValidateCreatePreauthorizationRefundRequestNotNull(CreatePreauthorizationRefundRequest createPreauthorizationRefundRequest)
         {
-            Validate((Rule: IsInvalid(createPreauthorizationRefund), Parameter: nameof(CreatePreauthorizationRefundRequest)));
+            Validate((Rule: IsInvalid(createPreauthorizationRefundRequest), Parameter: nameof(CreatePreauthorizationRefundRequest)));
         }
 
-        private static void ValidateCreateChargeNotNull(CreateCharge createPreauthorizationRefund)
+        private static void ValidateCreateChargeNotNull(CreateCharge createCharge)
         {
-            if (createPreauthorizationRefund is null)
+            if (createCharge is null)
             {
                 throw new NullPreauthorizationException();
             }
@@ -117,9 +117,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PreauthorizationServ
 
 
 
-        private static void ValidateCaptureChargeNotNull(CaptureCharge createPreauthorizationRefund)
+        private static void ValidateCaptureChargeNotNull(CaptureCharge captureCharge)
         {
-            if (createPreauthorizationRefund is null)
+            if (captureCharge is null)
             {
                 throw new NullPreauthorizationException();
             }
@@ -157,19 +157,19 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PreauthorizationServ
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
-            var invalidVirtualCardException = new InvalidPreauthorizationException();
+            var invalidPreauthorizationException = new InvalidPreauthorizationException();
 
             foreach ((dynamic rule, string parameter) in validations)
             {
                 if (rule.Condition)
                 {
-                    invalidVirtualCardException.UpsertDataList(
+                    invalidPreauthorizationException.UpsertDataList(
                         key: parameter,
                         value: rule.Message);
                 }
             }
 
-            invalidVirtualCardException.ThrowIfContainsErrors();
+            invalidPreauthorizationException.ThrowIfContainsErrors();
         }
     }
 }

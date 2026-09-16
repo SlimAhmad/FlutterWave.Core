@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.Misc
 {
     public interface IMiscellaneousClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="MiscellaneousClientValidationException" />
+        /// <exception cref="MiscellaneousClientDependencyException" />
+        /// <exception cref="MiscellaneousClientServiceException" />
         ValueTask<BalanceByCurrency> BalanceByCurrencyAsync(string externalBalanceByCurrencyRequest);
 
         ValueTask<BalanceByCurrencies> BalanceCurrenciesAsync();

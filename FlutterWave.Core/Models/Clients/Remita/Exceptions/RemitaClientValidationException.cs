@@ -3,7 +3,7 @@
 namespace FlutterWave.Core.Models.Clients.Remita.Exceptions
 {
     /// <summary>
-    /// This exception is thrown when a validation error occurs while using the completion client.
+    /// This exception is thrown when a validation error occurs while using the Remita client.
     /// For example, if required data is missing or invalid.
     /// </summary>
     public class RemitaClientValidationException : Xeption

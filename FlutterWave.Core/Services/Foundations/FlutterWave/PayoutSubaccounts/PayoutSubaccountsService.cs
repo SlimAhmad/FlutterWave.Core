@@ -52,7 +52,6 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PayoutSubaccountsSer
         TryCatch(async () =>
         {
             ValidateUpdatePayoutSubaccount(accountReference, updatePayoutSubaccount);
-            //ValidateUpdatePayoutSubaccountString(accountReference);
             ExternalUpdatePayoutSubaccountRequest externalUpdatePayoutSubaccountRequest = ConvertToPayoutSubaccountRequest(updatePayoutSubaccount);
             ExternalUpdatePayoutSubaccountResponse externalUpdatePayoutSubaccountResponse = await flutterWaveBroker.PostUpdatePayoutSubaccountAsync(
               accountReference, externalUpdatePayoutSubaccountRequest);
@@ -75,7 +74,7 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PayoutSubaccountsSer
         TryCatch(async () =>
         {
             ValidateFetchSubaccountAvailableBalanceString(accountReference);
-            ValidateFetchSubaccountAvailableBalanceString(accountReference);
+            ValidateFetchSubaccountAvailableBalanceString(currency);
             ExternalFetchSubaccountAvailableBalanceResponse externalFetchSubaccountAvailableBalanceResponse =
             await flutterWaveBroker.GetPayoutSubaccountsAvailableBalanceAsync(
                accountReference, currency);

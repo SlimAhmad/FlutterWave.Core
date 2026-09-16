@@ -6,7 +6,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Subscriptions
     public class FailedServerSubscriptionsException : Xeption
     {
         public FailedServerSubscriptionsException(Exception innerException)
-            : base(message: "Failed Subscription server error occurred, contact support.",
+            : base(message: "Failed Subscriptions server error occurred, contact support.",
                   innerException)
         { }
 

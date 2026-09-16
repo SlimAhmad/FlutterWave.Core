@@ -5,9 +5,9 @@ namespace FlutterWave.Core.Clients.Tokenization
 {
     public interface ITokenizedChargeClient
     {
-        /// <exception cref="ChatCompletionClientValidationException" />
-        /// <exception cref="ChatCompletionClientDependencyException" />
-        /// <exception cref="ChatCompletionClientServiceException" />
+        /// <exception cref="TokenizationClientValidationException" />
+        /// <exception cref="TokenizationClientDependencyException" />
+        /// <exception cref="TokenizationClientServiceException" />
         ValueTask<CreateTokenizedCharge> CreateTokenizedChargeAsync(
           CreateTokenizedCharge CreateTokenizedCharge);
 

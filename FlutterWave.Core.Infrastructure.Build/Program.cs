@@ -2,7 +2,7 @@
 using ADotNet.Clients;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets;
 using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks;
-using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks.SetupDotNetTaskV1s;
+using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks.SetupDotNetTaskV5s;
 
 namespace FlutterWave.Core.Infrastructure.Build
 {
@@ -18,7 +18,7 @@ namespace FlutterWave.Core.Infrastructure.Build
 
             var githubPipeline = new GithubPipeline
             {
-                Name = "FlutterWave.Core  Build",
+                Name = "FlutterWave.Core Build",
 
 
                 OnEvents = new Events
@@ -34,9 +34,9 @@ namespace FlutterWave.Core.Infrastructure.Build
                     }
                 },
 
-                Jobs = new Jobs
+                Jobs = new Dictionary<string, Job>
                 {
-                    Build = new BuildJob
+                    ["build"] = new Job
                     {
                         EnvironmentVariables = new Dictionary<string, string>
                         {
@@ -48,18 +48,18 @@ namespace FlutterWave.Core.Infrastructure.Build
 
                         Steps = new List<GithubTask>
                         {
-                            new CheckoutTaskV2
+                            new CheckoutTaskV5
                             {
                                 Name = "Pulling Code"
                             },
 
-                            new SetupDotNetTaskV1
+                            new SetupDotNetTaskV5
                             {
                                 Name = "Installing .NET",
 
-                                TargetDotNetVersion = new TargetDotNetVersion
+                                With = new TargetDotNetVersionV5
                                 {
-                                    DotNetVersion = "7.0.201"
+                                    DotNetVersion = "10.0.401"
                                 }
                             },
 
@@ -81,6 +81,7 @@ namespace FlutterWave.Core.Infrastructure.Build
                     }
                 }
             };
+
 
             adoNetClient.SerializeAndWriteToFile(
                 adoPipeline: githubPipeline,

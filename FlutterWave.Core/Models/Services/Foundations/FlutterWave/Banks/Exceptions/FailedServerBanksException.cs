@@ -6,7 +6,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Banks
     public class FailedServerBanksException : Xeption
     {
         public FailedServerBanksException(Exception innerException)
-            : base(message: "Failed Bank server error occurred, contact support.",
+            : base(message: "Failed Banks server error occurred, contact support.",
                   innerException)
         { }
 

@@ -9,7 +9,7 @@ namespace FlutterWave.Core.Models.Clients.Banks.Exceptions
     public class BankClientDependencyException : Xeption
     {
         public BankClientDependencyException(Xeption innerException)
-            : base(message: "Bank dependency error occurred, contact support.",
+            : base(message: "Banks dependency error occurred, contact support.",
                   innerException)
         { }
     }

@@ -59,23 +59,23 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TokenizedChargeServi
 
 
 
-        private static void ValidateCreateBulkTokenizedChargeRequestNotNull(CreateBulkTokenizedChargeRequest updateCardToken)
+        private static void ValidateCreateBulkTokenizedChargeRequestNotNull(CreateBulkTokenizedChargeRequest createBulkTokenizedChargeRequest)
         {
-            Validate((Rule: IsInvalid(updateCardToken), Parameter: nameof(CreateBulkTokenizedChargeRequest)));
+            Validate((Rule: IsInvalid(createBulkTokenizedChargeRequest), Parameter: nameof(CreateBulkTokenizedChargeRequest)));
         }
-        private static void ValidateCreateTokenizedChargeRequestNotNull(CreateTokenizedChargeRequest updateCardToken)
+        private static void ValidateCreateTokenizedChargeRequestNotNull(CreateTokenizedChargeRequest createTokenizedChargeRequest)
         {
-            Validate((Rule: IsInvalid(updateCardToken), Parameter: nameof(CreateTokenizedChargeRequest)));
-        }
-
-        private static void ValidateUpdateUpdateCardTokenRequestNotNull(UpdateCardTokenRequest updateCardToken)
-        {
-            Validate((Rule: IsInvalid(updateCardToken), Parameter: nameof(UpdateCardTokenRequest)));
+            Validate((Rule: IsInvalid(createTokenizedChargeRequest), Parameter: nameof(CreateTokenizedChargeRequest)));
         }
 
-        private static void ValidateCreateTokenizedChargeNotNull(CreateTokenizedCharge updateCardToken)
+        private static void ValidateUpdateUpdateCardTokenRequestNotNull(UpdateCardTokenRequest updateCardTokenRequest)
         {
-            if (updateCardToken is null)
+            Validate((Rule: IsInvalid(updateCardTokenRequest), Parameter: nameof(UpdateCardTokenRequest)));
+        }
+
+        private static void ValidateCreateTokenizedChargeNotNull(CreateTokenizedCharge createTokenizedCharge)
+        {
+            if (createTokenizedCharge is null)
             {
                 throw new NullTokenizedChargeException();
             }
@@ -91,9 +91,9 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TokenizedChargeServi
 
 
 
-        private static void ValidateCreateBulkTokenizedChargeNotNull(CreateBulkTokenizedCharge updateCardToken)
+        private static void ValidateCreateBulkTokenizedChargeNotNull(CreateBulkTokenizedCharge createBulkTokenizedCharge)
         {
-            if (updateCardToken is null)
+            if (createBulkTokenizedCharge is null)
             {
                 throw new NullTokenizedChargeException();
             }
@@ -128,19 +128,19 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TokenizedChargeServi
 
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
-            var invalidVirtualCardException = new InvalidTokenizedChargeException();
+            var invalidTokenizedChargeException = new InvalidTokenizedChargeException();
 
             foreach ((dynamic rule, string parameter) in validations)
             {
                 if (rule.Condition)
                 {
-                    invalidVirtualCardException.UpsertDataList(
+                    invalidTokenizedChargeException.UpsertDataList(
                         key: parameter,
                         value: rule.Message);
                 }
             }
 
-            invalidVirtualCardException.ThrowIfContainsErrors();
+            invalidTokenizedChargeException.ThrowIfContainsErrors();
         }
     }
 }
