@@ -26,5 +26,8 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
 
         ValueTask<VerifyTransaction> PostVerifyTransactionAsync(
             string transactionReference);
+
+        ValueTask<ResendTransactionWebhook> PostResendTransactionWebhookAsync(
+            int transactionId, int wait);
     }
 }

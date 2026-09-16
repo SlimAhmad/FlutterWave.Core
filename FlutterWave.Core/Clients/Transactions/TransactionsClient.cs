@@ -374,5 +374,50 @@ namespace FlutterWave.Core.Clients.Transaction
                     TransactionServiceException.InnerException as Xeption);
             }
         }
+
+        public async ValueTask<ResendTransactionWebhook> ResendTransactionWebhookAsync(int transactionId, int wait)
+        {
+            try
+            {
+                return await transactionsService.PostResendTransactionWebhookAsync(transactionId, wait);
+            }
+            catch (TransactionsValidationException TransactionValidationException)
+            {
+                throw new TransactionsClientValidationException(
+                    TransactionValidationException.InnerException as Xeption);
+            }
+            catch (TransactionsDependencyValidationException TransactionDependencyValidationException)
+            {
+
+                var message = TransactionDependencyValidationException.InnerException.InnerException.Message;
+                if (message != null)
+                {
+                    ExternalErrorResponse bankBranches =
+                        JsonSerializer.Deserialize<ExternalErrorResponse>(message);
+
+                    return new ResendTransactionWebhook
+                    {
+                        Response = new ResendTransactionWebhookResponse
+                        {
+                            Message = bankBranches.Message,
+                            Status = bankBranches.Status,
+                        }
+                    };
+                }
+
+                throw new TransactionsClientValidationException(
+                    TransactionDependencyValidationException.InnerException as Xeption);
+            }
+            catch (TransactionsDependencyException TransactionDependencyException)
+            {
+                throw new TransactionsClientDependencyException(
+                    TransactionDependencyException.InnerException as Xeption);
+            }
+            catch (TransactionsServiceException TransactionServiceException)
+            {
+                throw new TransactionsClientServiceException(
+                    TransactionServiceException.InnerException as Xeption);
+            }
+        }
     }
 }

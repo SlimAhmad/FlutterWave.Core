@@ -81,6 +81,11 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
            Validate(
                (Rule: IsInvalid(transactionsInt), Parameter: nameof(CreateRefund)));
 
+        private static void ValidateResendTransactionWebhook(int transactionId, int wait) =>
+            Validate(
+                (Rule: IsInvalid(transactionId), Parameter: nameof(ResendTransactionWebhook)),
+                (Rule: IsInvalid(wait), Parameter: nameof(ResendTransactionWebhook)));
+
 
 
         private static dynamic IsInvalid(string text) => new

@@ -88,6 +88,15 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
             return ConvertToVerifyTransactionResponse(externalVerifyTransactionResponse);
         });
 
+        public ValueTask<ResendTransactionWebhook> PostResendTransactionWebhookAsync(int transactionId, int wait) =>
+        TryCatch(async () =>
+        {
+            ValidateResendTransactionWebhook(transactionId, wait);
+            ExternalResendTransactionWebhookResponse externalResendTransactionWebhookResponse =
+                await flutterWaveBroker.PostResendTransactionWebhookAsync(transactionId, wait);
+            return ConvertToResendTransactionWebhookResponse(externalResendTransactionWebhookResponse);
+        });
+
 
         private static CreateRefund ConvertToCreateRefundResponse(ExternalCreateRefundResponse externalCreateRefundResponse)
         {
@@ -373,6 +382,20 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.TransactionsService
             };
 
 
+        }
+
+        private static ResendTransactionWebhook ConvertToResendTransactionWebhookResponse(
+            ExternalResendTransactionWebhookResponse externalResendTransactionWebhookResponse)
+        {
+            return new ResendTransactionWebhook
+            {
+                Response = new ResendTransactionWebhookResponse
+                {
+                    Status = externalResendTransactionWebhookResponse.Status,
+                    Message = externalResendTransactionWebhookResponse.Message,
+                    Data = externalResendTransactionWebhookResponse.Data
+                }
+            };
         }
 
     }
