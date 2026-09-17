@@ -14,7 +14,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Transactions
             public int TxId { get; set; }
             public string FlwRef { get; set; }
             public int WalletId { get; set; }
-            public int AmountRefunded { get; set; }
+            public decimal AmountRefunded { get; set; }
             public string Status { get; set; }
             public string Destination { get; set; }
             public Meta Meta { get; set; }

@@ -6,6 +6,6 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
     internal class ExternalCreatePreauthorizationRefundRequest
     {
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

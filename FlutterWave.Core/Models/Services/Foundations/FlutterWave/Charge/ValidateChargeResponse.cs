@@ -68,16 +68,16 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Charge
             public string DeviceFingerprint { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("charged_amount")]
-            public int ChargedAmount { get; set; }
+            public decimal ChargedAmount { get; set; }
 
             [JsonProperty("app_fee")]
             public double AppFee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("processor_response")]
             public string ProcessorResponse { get; set; }

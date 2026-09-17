@@ -54,25 +54,25 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string Currency { get; set; }
 
             [JsonProperty("gross_amount")]
-            public int GrossAmount { get; set; }
+            public decimal GrossAmount { get; set; }
 
             [JsonProperty("app_fee")]
-            public int AppFee { get; set; }
+            public decimal AppFee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("chargeback")]
-            public int Chargeback { get; set; }
+            public decimal Chargeback { get; set; }
 
             [JsonProperty("refund")]
-            public int Refund { get; set; }
+            public decimal Refund { get; set; }
 
             [JsonProperty("stampduty_charge")]
-            public int StampdutyCharge { get; set; }
+            public decimal StampdutyCharge { get; set; }
 
             [JsonProperty("net_amount")]
-            public int NetAmount { get; set; }
+            public decimal NetAmount { get; set; }
 
             [JsonProperty("transaction_count")]
             public int TransactionCount { get; set; }
@@ -136,19 +136,19 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public int Id { get; set; }
 
             [JsonProperty("charged_amount")]
-            public int ChargedAmount { get; set; }
+            public decimal ChargedAmount { get; set; }
 
             [JsonProperty("app_fee")]
-            public int AppFee { get; set; }
+            public decimal AppFee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("stampduty_charge")]
-            public int StampdutyCharge { get; set; }
+            public decimal StampdutyCharge { get; set; }
 
             [JsonProperty("settlement_amount")]
-            public int SettlementAmount { get; set; }
+            public decimal SettlementAmount { get; set; }
 
             [JsonProperty("status")]
             public string Status { get; set; }
@@ -169,7 +169,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string Rrn { get; set; }
 
             [JsonProperty("subaccount_settlement")]
-            public int SubaccountSettlement { get; set; }
+            public decimal SubaccountSettlement { get; set; }
         }
 
 

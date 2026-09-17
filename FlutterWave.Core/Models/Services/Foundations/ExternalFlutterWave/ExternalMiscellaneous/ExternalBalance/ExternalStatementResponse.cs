@@ -46,16 +46,16 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Misce
             public string Type { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("currency")]
             public string Currency { get; set; }
 
             [JsonProperty("balance_before")]
-            public int BalanceBefore { get; set; }
+            public decimal BalanceBefore { get; set; }
 
             [JsonProperty("balance_after")]
-            public int BalanceAfter { get; set; }
+            public decimal BalanceAfter { get; set; }
 
             [JsonProperty("reference")]
             public string Reference { get; set; }
@@ -73,7 +73,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Misce
             public int RateUsed { get; set; }
 
             [JsonProperty("sent_amount")]
-            public int SentAmount { get; set; }
+            public decimal SentAmount { get; set; }
 
             [JsonProperty("statement_type")]
             public string StatementType { get; set; }

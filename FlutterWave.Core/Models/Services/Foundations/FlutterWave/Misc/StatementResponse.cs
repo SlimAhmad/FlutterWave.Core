@@ -27,16 +27,16 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Miscellaneous
         {
 
             public string Type { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public string Currency { get; set; }
-            public int BalanceBefore { get; set; }
-            public int BalanceAfter { get; set; }
+            public decimal BalanceBefore { get; set; }
+            public decimal BalanceAfter { get; set; }
             public string Reference { get; set; }
             public DateTime Date { get; set; }
             public string Remarks { get; set; }
             public string SentCurrency { get; set; }
             public int RateUsed { get; set; }
-            public int SentAmount { get; set; }
+            public decimal SentAmount { get; set; }
             public string StatementType { get; set; }
         }
     }

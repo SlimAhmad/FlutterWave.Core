@@ -18,7 +18,7 @@
             public string CreatedAt { get; set; }
             public string ExpiryDate { get; set; }
             public string Note { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
         }
 
     }

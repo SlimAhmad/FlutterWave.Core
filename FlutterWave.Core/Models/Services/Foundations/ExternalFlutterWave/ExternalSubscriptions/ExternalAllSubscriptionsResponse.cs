@@ -33,7 +33,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public int Id { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("customer")]
             public Customer Customer { get; set; }

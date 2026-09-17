@@ -24,7 +24,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string Customer { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("recurrence")]
             public string Recurrence { get; set; }

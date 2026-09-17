@@ -69,19 +69,19 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string DeviceFingerprint { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("currency")]
             public string Currency { get; set; }
 
             [JsonProperty("charged_amount")]
-            public int ChargedAmount { get; set; }
+            public decimal ChargedAmount { get; set; }
 
             [JsonProperty("app_fee")]
-            public int AppFee { get; set; }
+            public decimal AppFee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("processor_response")]
             public string ProcessorResponse { get; set; }
@@ -108,7 +108,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string AccountId { get; set; }
 
             [JsonProperty("amount_settled")]
-            public int AmountSettled { get; set; }
+            public decimal AmountSettled { get; set; }
 
             [JsonProperty("card")]
             public Card Card { get; set; }

@@ -42,10 +42,10 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string DebitCurrency { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("fee")]
-            public int Fee { get; set; }
+            public decimal Fee { get; set; }
 
             [JsonProperty("status")]
             public string Status { get; set; }

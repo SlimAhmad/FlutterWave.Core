@@ -8,6 +8,6 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.VirtualCards
         public string DebitCurrency { get; set; }
 
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

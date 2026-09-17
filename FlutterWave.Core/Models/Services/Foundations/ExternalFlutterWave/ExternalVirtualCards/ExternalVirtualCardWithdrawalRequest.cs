@@ -5,6 +5,6 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
     internal class ExternalVirtualCardWithdrawalRequest
     {
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

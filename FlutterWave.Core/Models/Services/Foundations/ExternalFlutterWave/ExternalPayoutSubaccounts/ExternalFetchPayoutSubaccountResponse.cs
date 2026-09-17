@@ -62,10 +62,10 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
         public class TransferLimits
         {
             [JsonProperty("single_limit")]
-            public int SingleLimit { get; set; }
+            public decimal SingleLimit { get; set; }
 
             [JsonProperty("total_daily_limit")]
-            public int TotalDailyLimit { get; set; }
+            public decimal TotalDailyLimit { get; set; }
         }
 
 

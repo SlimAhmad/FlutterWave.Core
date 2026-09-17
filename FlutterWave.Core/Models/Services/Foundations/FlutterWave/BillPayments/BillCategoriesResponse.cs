@@ -21,10 +21,10 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.BillPayments
             public string BillerName { get; set; }
             public string ItemCode { get; set; }
             public string ShortName { get; set; }
-            public int Fee { get; set; }
+            public decimal Fee { get; set; }
             public bool CommissionOnFee { get; set; }
             public string LabelName { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
         }
 
 

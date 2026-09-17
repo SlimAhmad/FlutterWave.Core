@@ -33,7 +33,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Payme
             public string Currency { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
 
             [JsonProperty("duration")]
             public int Duration { get; set; }

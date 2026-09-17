@@ -40,13 +40,13 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public object Email { get; set; }
 
             [JsonProperty("fee")]
-            public int Fee { get; set; }
+            public decimal Fee { get; set; }
 
             [JsonProperty("maximum")]
-            public int Maximum { get; set; }
+            public decimal Maximum { get; set; }
 
             [JsonProperty("minimum")]
-            public int Minimum { get; set; }
+            public decimal Minimum { get; set; }
         }
 
     }

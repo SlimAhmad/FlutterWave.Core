@@ -12,7 +12,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.BillPayments
         {
             public string Country { get; set; }
             public string Customer { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public string Recurrence { get; set; }
             public string Type { get; set; }
             public string Reference { get; set; }

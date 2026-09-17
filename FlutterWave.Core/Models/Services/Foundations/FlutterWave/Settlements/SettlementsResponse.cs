@@ -26,11 +26,11 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Settlements
             public string Currency { get; set; }
             public double GrossAmount { get; set; }
             public double AppFee { get; set; }
-            public int MerchantFee { get; set; }
-            public int Chargeback { get; set; }
-            public int Refund { get; set; }
-            public int StampdutyCharge { get; set; }
-            public int NetAmount { get; set; }
+            public decimal MerchantFee { get; set; }
+            public decimal Chargeback { get; set; }
+            public decimal Refund { get; set; }
+            public decimal StampdutyCharge { get; set; }
+            public decimal NetAmount { get; set; }
             public int TransactionCount { get; set; }
             public object ProcessorRef { get; set; }
             public string DisburseRef { get; set; }

@@ -63,19 +63,19 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public double AppFee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("chargeback")]
-            public int Chargeback { get; set; }
+            public decimal Chargeback { get; set; }
 
             [JsonProperty("refund")]
-            public int Refund { get; set; }
+            public decimal Refund { get; set; }
 
             [JsonProperty("stampduty_charge")]
-            public int StampdutyCharge { get; set; }
+            public decimal StampdutyCharge { get; set; }
 
             [JsonProperty("net_amount")]
-            public int NetAmount { get; set; }
+            public decimal NetAmount { get; set; }
 
             [JsonProperty("transaction_count")]
             public int TransactionCount { get; set; }

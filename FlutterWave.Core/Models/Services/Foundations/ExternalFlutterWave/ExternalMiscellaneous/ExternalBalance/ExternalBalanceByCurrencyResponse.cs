@@ -20,7 +20,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Misce
             public string Currency { get; set; }
 
             [JsonProperty("available_balance")]
-            public int AvailableBalance { get; set; }
+            public decimal AvailableBalance { get; set; }
 
             [JsonProperty("ledger_balance")]
             public double LedgerBalance { get; set; }

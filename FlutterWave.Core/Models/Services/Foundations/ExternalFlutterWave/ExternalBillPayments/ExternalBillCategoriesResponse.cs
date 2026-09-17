@@ -48,7 +48,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string ShortName { get; set; }
 
             [JsonProperty("fee")]
-            public int Fee { get; set; }
+            public decimal Fee { get; set; }
 
             [JsonProperty("commission_on_fee")]
             public bool CommissionOnFee { get; set; }
@@ -57,7 +57,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string LabelName { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
         }
 
 

@@ -154,6 +154,18 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.VirtualAccountsServi
             Message = "Value is required"
         };
 
+        private static dynamic IsInvalid(decimal number) => new
+        {
+            Condition = number <= 0,
+            Message = "Value is required"
+        };
+
+        private static dynamic IsInvalid(int number) => new
+        {
+            Condition = number <= 0,
+            Message = "Value is required"
+        };
+
         private static void Validate(params (dynamic Rule, string Parameter)[] validations)
         {
             var invalidVirtualAccountException = new InvalidVirtualAccountsException();

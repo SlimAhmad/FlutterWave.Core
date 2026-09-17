@@ -4,7 +4,7 @@
     {
         public string AccountBank { get; set; }
         public string AccountNumber { get; set; }
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
         public string Narration { get; set; }
         public string Currency { get; set; }
         public string Reference { get; set; }
