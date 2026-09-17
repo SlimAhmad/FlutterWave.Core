@@ -45,7 +45,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public int Id { get; set; }
 
             [JsonProperty("amount_refunded")]
-            public int AmountRefunded { get; set; }
+            public decimal AmountRefunded { get; set; }
 
             [JsonProperty("status")]
             public string Status { get; set; }

@@ -15,7 +15,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.TokenizedChar
         public string Country { get; set; }
 
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
 
         [JsonProperty("email")]
         public string Email { get; set; }

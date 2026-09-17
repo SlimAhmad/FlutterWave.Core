@@ -9,8 +9,8 @@
         public class Datum
         {
             public string TxRef { get; set; }
-            public int Amount { get; set; }
-            public int Fee { get; set; }
+            public decimal Amount { get; set; }
+            public decimal Fee { get; set; }
             public object Currency { get; set; }
             public object Extra { get; set; }
             public object FlwRef { get; set; }

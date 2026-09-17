@@ -17,9 +17,9 @@
             public string Customer { get; set; }
             public string ProductCode { get; set; }
             public object Email { get; set; }
-            public int Fee { get; set; }
-            public int Maximum { get; set; }
-            public int Minimum { get; set; }
+            public decimal Fee { get; set; }
+            public decimal Maximum { get; set; }
+            public decimal Minimum { get; set; }
         }
 
     }

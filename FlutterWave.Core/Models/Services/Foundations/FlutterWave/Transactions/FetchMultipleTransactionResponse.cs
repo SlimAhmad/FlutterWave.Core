@@ -22,11 +22,11 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Transactions
             public string TxRef { get; set; }
             public string FlwRef { get; set; }
             public string DeviceFingerprint { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public string Currency { get; set; }
-            public int ChargedAmount { get; set; }
+            public decimal ChargedAmount { get; set; }
             public int? AppFee { get; set; }
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
             public string ProcessorResponse { get; set; }
             public string AuthModel { get; set; }
             public string Ip { get; set; }

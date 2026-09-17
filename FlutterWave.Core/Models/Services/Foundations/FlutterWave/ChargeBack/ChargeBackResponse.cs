@@ -13,7 +13,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.ChargeBacks
         public class Datum
         {
             public int Id { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public string FlwRef { get; set; }
             public string Status { get; set; }
             public string Stage { get; set; }

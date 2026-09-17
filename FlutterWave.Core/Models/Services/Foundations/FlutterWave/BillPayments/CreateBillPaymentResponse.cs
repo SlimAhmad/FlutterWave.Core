@@ -8,7 +8,7 @@
         public class Datum
         {
             public string PhoneNumber { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public string Network { get; set; }
             public string FlwRef { get; set; }
             public string TxRef { get; set; }

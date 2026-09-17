@@ -86,6 +86,18 @@ namespace FlutterWave.Core.Services.Foundations.FlutterWave.PaymentPlanService
             Message = "Value is required"
         };
 
+        private static dynamic IsInvalid(decimal number) => new
+        {
+            Condition = number <= 0,
+            Message = "Value is required"
+        };
+
+        private static dynamic IsInvalid(int number) => new
+        {
+            Condition = number <= 0,
+            Message = "Value is required"
+        };
+
         private static void ValidateTransferInt(int paymentPlan) =>
          Validate((Rule: IsInvalid(paymentPlan), Parameter: nameof(PaymentPlan)));
 

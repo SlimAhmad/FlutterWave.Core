@@ -19,7 +19,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Transfers
             public string FullName { get; set; }
             public string Currency { get; set; }
             public string DebitCurrency { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public double Fee { get; set; }
             public string Status { get; set; }
             public string Reference { get; set; }

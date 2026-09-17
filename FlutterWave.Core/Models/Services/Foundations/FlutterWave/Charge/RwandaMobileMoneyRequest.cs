@@ -12,7 +12,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Charge
         public string OrderId { get; set; }
 
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
 
         [JsonProperty("currency")]
         public string Currency { get; set; }

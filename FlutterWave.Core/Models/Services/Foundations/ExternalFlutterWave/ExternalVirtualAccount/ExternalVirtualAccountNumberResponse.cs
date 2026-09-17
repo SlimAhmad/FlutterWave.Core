@@ -46,7 +46,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
             public string Note { get; set; }
 
             [JsonProperty("amount")]
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
         }
 
 

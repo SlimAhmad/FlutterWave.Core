@@ -19,7 +19,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Subscriptions
         public class Datum
         {
             public int Id { get; set; }
-            public int Amount { get; set; }
+            public decimal Amount { get; set; }
             public Customer Customer { get; set; }
             public int Plan { get; set; }
             public string Status { get; set; }

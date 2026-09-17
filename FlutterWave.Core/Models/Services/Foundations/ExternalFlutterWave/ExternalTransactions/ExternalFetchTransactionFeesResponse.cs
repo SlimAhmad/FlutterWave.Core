@@ -18,19 +18,19 @@ namespace FlutterWave.Core.Models.Services.Foundations.ExternalFlutterWave.Exter
         internal class ExternalFetchTransactionFeesDataModel
         {
             [JsonProperty("charge_amount")]
-            public int ChargeAmount { get; set; }
+            public decimal ChargeAmount { get; set; }
 
             [JsonProperty("fee")]
-            public int Fee { get; set; }
+            public decimal Fee { get; set; }
 
             [JsonProperty("merchant_fee")]
-            public int MerchantFee { get; set; }
+            public decimal MerchantFee { get; set; }
 
             [JsonProperty("flutterwave_fee")]
-            public int FlutterwaveFee { get; set; }
+            public decimal FlutterwaveFee { get; set; }
 
             [JsonProperty("stamp_duty_fee")]
-            public int StampDutyFee { get; set; }
+            public decimal StampDutyFee { get; set; }
 
             [JsonProperty("currency")]
             public string Currency { get; set; }

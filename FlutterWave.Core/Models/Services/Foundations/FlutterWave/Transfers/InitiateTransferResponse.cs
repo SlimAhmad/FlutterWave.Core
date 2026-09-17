@@ -17,8 +17,8 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Transfers
             public DateTime CreatedAt { get; set; }
             public string Currency { get; set; }
             public string DebitCurrency { get; set; }
-            public int Amount { get; set; }
-            public float Fee { get; set; }
+            public decimal Amount { get; set; }
+            public decimal Fee { get; set; }
             public string Status { get; set; }
             public string Reference { get; set; }
             public object Meta { get; set; }

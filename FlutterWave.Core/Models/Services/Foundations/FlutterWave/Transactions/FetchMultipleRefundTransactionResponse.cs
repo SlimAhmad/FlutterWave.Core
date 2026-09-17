@@ -24,7 +24,7 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Transactions
         public class Datum
         {
             public int Id { get; set; }
-            public int AmountRefunded { get; set; }
+            public decimal AmountRefunded { get; set; }
             public string Status { get; set; }
             public string FlwRef { get; set; }
             public string Comment { get; set; }

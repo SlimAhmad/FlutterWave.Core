@@ -6,6 +6,6 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Preauthorizat
     public class CreatePreauthorizationRefundRequest
     {
         [JsonProperty("amount")]
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

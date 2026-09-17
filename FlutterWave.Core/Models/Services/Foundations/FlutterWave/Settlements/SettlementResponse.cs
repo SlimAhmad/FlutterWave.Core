@@ -22,13 +22,13 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Settlements
             public string Status { get; set; }
             public bool IsLocal { get; set; }
             public string Currency { get; set; }
-            public int GrossAmount { get; set; }
-            public int AppFee { get; set; }
-            public int MerchantFee { get; set; }
-            public int Chargeback { get; set; }
-            public int Refund { get; set; }
-            public int StampdutyCharge { get; set; }
-            public int NetAmount { get; set; }
+            public decimal GrossAmount { get; set; }
+            public decimal AppFee { get; set; }
+            public decimal MerchantFee { get; set; }
+            public decimal Chargeback { get; set; }
+            public decimal Refund { get; set; }
+            public decimal StampdutyCharge { get; set; }
+            public decimal NetAmount { get; set; }
             public int TransactionCount { get; set; }
             public object ProcessorRef { get; set; }
             public string DisburseRef { get; set; }
@@ -50,18 +50,18 @@ namespace FlutterWave.Core.Models.Services.Foundations.FlutterWave.Settlements
             public string FlwRef { get; set; }
             public string TxRef { get; set; }
             public int Id { get; set; }
-            public int ChargedAmount { get; set; }
-            public int AppFee { get; set; }
-            public int MerchantFee { get; set; }
-            public int StampdutyCharge { get; set; }
-            public int SettlementAmount { get; set; }
+            public decimal ChargedAmount { get; set; }
+            public decimal AppFee { get; set; }
+            public decimal MerchantFee { get; set; }
+            public decimal StampdutyCharge { get; set; }
+            public decimal SettlementAmount { get; set; }
             public string Status { get; set; }
             public string PaymentEntity { get; set; }
             public string TransactionDate { get; set; }
             public string Currency { get; set; }
             public string CardLocale { get; set; }
             public string Rrn { get; set; }
-            public int SubaccountSettlement { get; set; }
+            public decimal SubaccountSettlement { get; set; }
         }
 
 

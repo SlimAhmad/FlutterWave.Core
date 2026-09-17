@@ -8,11 +8,11 @@
 
         public class FetchTransactionFeesDataModel
         {
-            public int ChargeAmount { get; set; }
-            public int Fee { get; set; }
-            public int MerchantFee { get; set; }
-            public int FlutterwaveFee { get; set; }
-            public int StampDutyFee { get; set; }
+            public decimal ChargeAmount { get; set; }
+            public decimal Fee { get; set; }
+            public decimal MerchantFee { get; set; }
+            public decimal FlutterwaveFee { get; set; }
+            public decimal StampDutyFee { get; set; }
             public string Currency { get; set; }
         }
 
